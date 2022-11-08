@@ -2,7 +2,7 @@
   <data>
 
     <record model="ir.actions.act_window" id="informacion_list_action">
-      <field name="name">A acción con ola mundo</field>
+      <field name="name">A acción de informacion</field>
       <field name="res_model">odoo_basico.informacion</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
@@ -15,7 +15,11 @@
       <field name="model">odoo_basico.informacion</field>
       <field name="arch" type="xml">
         <tree string="Formulario para Ola Mundo">
-            <field name="name"/>
+          <field name="name"/>
+          <field name="descripcion"/>
+          <field name="alto_en_cms"/>
+          <field name="ancho_en_cms"/>
+          <field name="longo_en_cms"/>
         </tree>
       </field>
     </record>
@@ -28,6 +32,9 @@
           <group>
             <field name="name"/>
             <field name="descripcion"/>
+            <field name="alto_en_cms"/>
+            <field name="ancho_en_cms"/>
+            <field name="longo_en_cms"/>
           </group>
         </form>
       </field>
