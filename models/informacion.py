@@ -4,10 +4,13 @@ from odoo import models, fields, api
 
 class informacion(models.Model):
     _name = 'odoo_basico.informacion'
-    _description = 'Exemplo para infomacion'
+    _description = 'Exemplo para informacion'
 
     name = fields.Char(string="Título:")
     descripcion = fields.Text(string="A descripción:")
+    peso = fields.Float(string="Peso en KGs.",default=4.3,digits=(6,2))
+    sexo_traducido = fields.Selection([('Mujer','Muller'),('Hombre','Home'),('Otros','Outros')],string="Sexo")
+    autorizado = fields.Boolean(string="¿Autorizado?", default=True)
     alto_en_cms = fields.Integer(string="Alto en Centímetros:")
     ancho_en_cms = fields.Integer(string="Ancho en Centímetros:")
     longo_en_cms = fields.Integer(string="Longo en Centímetros:")
