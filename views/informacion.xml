@@ -10,6 +10,19 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="informacion_search_view">
+            <field name="name">informacion.search</field>
+            <field name="model">odoo_basico.informacion</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="autorizado"/>
+                    <field name="sexo_traducido"/>
+                </search>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="informacion_tree_view">
             <field name="name">informacion.tree</field>
             <field name="model">odoo_basico.informacion</field>
@@ -36,16 +49,38 @@
                 <form string="Formulario para Informacion">
                     <group>
                         <field name="name"/>
-                        <field name="descripcion"/>
-                        <field name="autorizado"/>
-                        <field name="sexo_traducido"/>
-                        <field name="alto_en_cms"/>
-                        <field name="ancho_en_cms"/>
-                        <field name="longo_en_cms"/>
-                        <field name="volume"/>
-                        <field name="peso"/>
-                        <field name="densidade"/>
                     </group>
+                    <notebook>
+                        <page string="Datos Persoais">
+                            <group>
+                                <field name="descripcion"/>
+                                <field name="autorizado"/>
+                                <field name="sexo_traducido"/>
+                            </group>
+                        </page>
+                        <page string="Datos Numéricos">
+                            <group>
+                                <field name="literal" readonly="1"/>
+                                <field name="alto_en_cms"/>
+                                <field name="ancho_en_cms"/>
+                                <field name="longo_en_cms"/>
+                                <field name="volume"/>
+                                <field name="peso"/>
+                                <field name="densidade"/>
+                            </group>
+                        </page>
+                        <page string="Moedas">
+                            <group>
+
+                            </group>
+                        </page>
+                        <page string="Datas">
+                            <group>
+
+                            </group>
+                        </page>
+                    </notebook>
+
                 </form>
             </field>
         </record>
