@@ -6,6 +6,8 @@ from odoo.exceptions import ValidationError
 class informacion(models.Model):
     _name = 'odoo_basico.informacion'
     _description = 'Exemplo para informacion'
+    _sql_constraints = [('nomeUnico', 'unique(name)', 'Non se pode repetir o Título')]
+    _order = "descripcion desc"
 
     name = fields.Char(string="Título:")
     descripcion = fields.Text(string="A descripción:")
