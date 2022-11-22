@@ -14,8 +14,8 @@
             <field name="name">informacion.grafico</field>
             <field name="model">odoo_basico.informacion</field>
             <field name="arch" type="xml">
-                <graph string="alto" type="bar">
-                    <field name="alto_en_cms" type="row"/>
+                <graph string="densidade" type="bar">
+                    <field name="densidade" type="row"/>
                 </graph>
             </field>
         </record>
